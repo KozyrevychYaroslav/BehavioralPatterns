@@ -42,7 +42,7 @@ public class ChainOfResponsibilityTest {
         InviteController controller = new WalkDay(Priority.WALK_MOOD);
 
         controller.writeMessage("Walk mood", Priority.WALK_MOOD);
-        assertEquals("Invite one friend: Walk mood",  outputStreamCaptor.toString().trim());
+        assertEquals("Invite one friend: Walk mood", outputStreamCaptor.toString().trim());
         outputStreamCaptor.reset();
 
         controller.writeMessage("Birthday", Priority.BIRTHDAY);
@@ -54,7 +54,7 @@ public class ChainOfResponsibilityTest {
     public void birthdayTest() {
         InviteController controller = new Birthday(Priority.BIRTHDAY);
         controller.writeMessage("Birthday", Priority.BIRTHDAY);
-        assertEquals("Invite all my friends: Birthday",  outputStreamCaptor.toString().trim());
+        assertEquals("Invite all my friends: Birthday", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -72,10 +72,10 @@ public class ChainOfResponsibilityTest {
         outputStreamCaptor.reset();
 
         controller.writeMessage("Walk mood", Priority.WALK_MOOD);
-        assertEquals("Invite one friend: Walk mood",  outputStreamCaptor.toString().trim());
+        assertEquals("Invite one friend: Walk mood", outputStreamCaptor.toString().trim());
         outputStreamCaptor.reset();
 
         controller.writeMessage("Birthday!!!", Priority.BIRTHDAY);
-        assertEquals("Invite all my friends: Birthday!!!",  outputStreamCaptor.toString().trim());
+        assertEquals("Invite all my friends: Birthday!!!", outputStreamCaptor.toString().trim());
     }
 }
