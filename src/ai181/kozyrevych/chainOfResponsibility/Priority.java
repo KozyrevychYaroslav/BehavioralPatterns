@@ -5,7 +5,7 @@ public enum Priority {
 
     private int priority;
 
-     Priority(int priority) {
+    Priority(int priority) {
         this.priority = priority;
     }
 
