@@ -36,7 +36,7 @@ public class VisitorTest {
         mood.accept(human);
         assertEquals("Listening to music", outputStreamCaptor.toString().trim());
         outputStreamCaptor.reset();
-//паа
+
         mood = new GoodMood();
         mood.accept(human);
         assertEquals("Doing some work", outputStreamCaptor.toString().trim());
